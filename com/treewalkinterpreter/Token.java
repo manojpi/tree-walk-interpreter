@@ -1,3 +1,5 @@
+package com.treewalkinterpreter;
+
 class Token {
     final TokenType type;
     final String lexeme;

@@ -1,9 +1,11 @@
+package com.treewalkinterpreter;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static TokenType.*;
+import static com.treewalkinterpreter.TokenType.*;
 
 class Scanner {
     private final String source;
@@ -51,7 +53,7 @@ class Scanner {
         return current >= source.length();
     }
 
-    private scanToken() {
+    private void scanToken() {
         char c = advance();
         switch (c) {
             case '(': addToken(LEFT_PAREN); break;
@@ -136,7 +138,7 @@ class Scanner {
             return;
         }
 
-        advace();
+        advance();
 
         String value = source.substring(start + 1, current - 1);
         addToken(STRING, value);
