@@ -1,2 +1,4 @@
 .idea/
-tree-walk-interpreter.iml
+treewalkinterpreter.iml
+out/
+*.class
